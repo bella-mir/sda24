@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Лабораторная работа 1: Создание карт застройки и землепользования в QGIS &#8212; Spatial Data Analysis 2024</title>
+    <title>Лабораторная работа 1 &#8212; Spatial Data Analysis 2024</title>
   
   
   
@@ -149,7 +149,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Лабораторная работа 1: Создание карт застройки и землепользования в QGIS</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Лабораторная работа 1</a></li>
 </ul>
 
     </div>
@@ -333,7 +333,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Лабораторная работа 1: Создание карт застройки и землепользования в QGIS</h1>
+    <h1>Лабораторная работа 1</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -343,28 +343,27 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Примечание:</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis">Создание карт застройки и землепользования в QGIS</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Описание задания</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Перед началом работы</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">Этап 1: Выгрузка данных из OpenStreetMap и их сохранение</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Этап 2: Настройки визуализации</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Этап 3: Определение области исследования</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Этап 3.1: Создание круга заданным радиусом и его сохранение</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Этап 3.2: Обрезка зданий и землепользования по границе круга</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Этап 3: Расчёты</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Этап 3.1: Расчёт доли различных типов землепользования в границах района</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Этап 4: Расчёты</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Этап 4.1: Расчёт доли различных типов землепользования</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Этап 4.2: Расчёт процента застроенной территории</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1. Расчёт площади для каждого типа землепользования</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2. Вычисление процентного соотношения каждого типа землепользования</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Этап 3.2: Расчёт процента застроенной территории</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Этап 5: Создание Layout с двумя картами</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Этап 4: Создание Layout с двумя картами</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#themes-qgis">Использование тем (Themes) в QGIS</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Этап 6: Добавление элементов карты</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Этап 7: Сохранение итогового изображения</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Итог</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Этап 5: Добавление элементов карты</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Этап 6: Сохранение итогового изображения</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Итог</a></li>
 </ul>
 </li>
 </ul>
@@ -378,12 +377,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="tex2jax_ignore mathjax_ignore section" id="qgis">
-<h1>Лабораторная работа 1: Создание карт застройки и землепользования в QGIS<a class="headerlink" href="#qgis" title="Permalink to this heading">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>Лабораторная работа 1<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<div class="section" id="qgis">
+<h2>Создание карт застройки и землепользования в QGIS<a class="headerlink" href="#qgis" title="Permalink to this heading">#</a></h2>
 <p><strong>Дедлайн работы – 16.11 23:59</strong></p>
 <hr class="docutils" />
-<div class="section" id="id1">
-<h2>Примечание:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<p><strong>Примечание:</strong></p>
 <ol class="arabic simple">
 <li><p>Приведённый план действий — это примерный порядок работы. Вы можете выполнить задание любым удобным для вас способом, главное — прийти к конечному результату.</p></li>
 <li><p>Описание задания носит общий характер, более подробно шаги разбираются на семинаре.</p></li>
@@ -392,7 +392,7 @@ document.write(`
 <hr class="docutils" />
 <div class="section" id="id2">
 <h3>Описание задания<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
-<p><strong>Задача:</strong> Создать карты застройки (шварцплан) и землепользования для выбранного участка города.</p>
+<p><strong>Задача:</strong> Создать карты застройки (шварцплан) и землепользования для выбранного района города.</p>
 <p>На карте должны быть:</p>
 <ul class="simple">
 <li><p>Расчёты процента застроенной территории</p></li>
@@ -400,7 +400,7 @@ document.write(`
 </ul>
 <p>К карте должно прилагаться краткое описание исследуемой территории.</p>
 <blockquote>
-<div><p><strong>Примечание:</strong> Рекомендуемый радиус исследуемой территории — не более 3 км. (см. этап работы 4). Не забудьте включить все обязательные элементы карты (см. презентацию с занятия).</p>
+<div><p><strong>Примечание:</strong> Рекомендуется выбрать любой район Москвы или Санкт-Петербурга, но можно работать и с другими городами. Не забудьте включить все обязательные элементы карты (см. презентацию с занятия).</p>
 </div></blockquote>
 </div>
 <hr class="docutils" />
@@ -408,6 +408,7 @@ document.write(`
 <h3>Перед началом работы<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Создайте директорию на компьютере для данной лабораторной работы, где будут храниться данные и проект. Структуру хранения данных можно найти в презентации к занятию.</p></li>
+<li><p>Установите <a class="reference external" href="https://www.qgis.org/download/">QGIS - LTR версию</a></p></li>
 <li><p>Измените язык QGIS на английский:</p>
 <ul class="simple">
 <li><p>Перейдите в меню <strong>Настройки</strong> → <strong>Параметры</strong>.</p></li>
@@ -430,9 +431,9 @@ document.write(`
 <li><p>После установки плагин будет доступен через <strong>Vector</strong> → <strong>Quick OSM</strong>.</p></li>
 </ul>
 </li>
-<li><p><strong>Настройка и загрузка данных</strong>:</p>
+<li><p><strong>Загрузка данных</strong>:</p>
 <ul class="simple">
-<li><p>В поле <strong>key</strong> укажите тип объекта (например, для зданий используйте <code class="docutils literal notranslate"><span class="pre">buildings</span></code>).</p></li>
+<li><p>В поле <strong>key</strong> укажите тип объекта (например, для зданий используйте <code class="docutils literal notranslate"><span class="pre">building</span></code>).</p></li>
 <li><p>В поле <strong>value</strong> укажите класс объекта (если необходимо).</p></li>
 <li><p>В поле <strong>in</strong> можно ввести название места для скачивания данных, выбрать экстент открытого окна или экстент определённого слоя.</p></li>
 </ul>
@@ -442,24 +443,25 @@ document.write(`
 <div><p><strong>Полезная информация</strong>: OSM использует ключи и значения для обозначения объектов, их описание можно найти на <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Map_features">Wiki OSM</a>.</p>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li><p><strong>Типы данных для первой и второй карты</strong>:</p>
+<li><p><strong>Типы данных наших карт</strong>:</p>
 <ul class="simple">
-<li><p>Для первой карты необходимы данные о зданиях (<code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">buildings</span></code>) и, возможно, гидрография, если она попадает в ваш участок (<code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">natural,</span> <span class="pre">value</span> <span class="pre">=</span> <span class="pre">water</span></code>).</p></li>
-<li><p>Для второй карты могут пригодиться данные о землепользовании (<code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">landuse</span></code>), автомобильных дорогах (<code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">highway</span></code>) и железных дорогах (<code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">railway</span></code>).</p></li>
+<li><p>Загрузите границы исследумого района (<code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">admin_level</span></code>) + in - название района+название города или название города</p></li>
+<li><p>Для первой карты необходимы данные о зданиях (<code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">building</span></code>) и, возможно, гидрография, если она попадает в ваш участок (<code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">natural,</span> <span class="pre">value</span> <span class="pre">=</span> <span class="pre">water</span></code>); + in - название района+название города или название города, или экстент границ районов города - данных, полученных в предыдущем пункте</p></li>
+<li><p>Для второй карты могут пригодиться данные о землепользовании (<code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">landuse</span></code>), автомобильных дорогах (<code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">highway</span></code>) и железных дорогах (<code class="docutils literal notranslate"><span class="pre">key</span> <span class="pre">=</span> <span class="pre">railway</span></code>); + in - название района+название города или название города, или экстент границ районов города - данных, полученных в предыдущем пункте</p></li>
 </ul>
 </li>
 </ol>
 <blockquote>
-<div><p><strong>Важно</strong>: Выполняйте запросы для разных типов данных поочередно.</p>
+<div><p><strong>Важно</strong>: Выполняйте запросы для разных типов данных поочередно, в</p>
 </div></blockquote>
 <ol class="arabic simple" start="4">
 <li><p><strong>Сохранение слоёв</strong>:</p>
 <ul class="simple">
-<li><p>После выгрузки слои в QGIS являются временными, также они сохраняются в виде разных типов геометрий.</p></li>
+<li><p>После выгрузки слои в QGIS являются временными, также они выгружаются в виде разных типов геометрий.</p></li>
 <li><p>Для сохранения нужных слоёв кликните правой кнопкой мыши на слой → <strong>Export</strong> → <strong>Save Features As</strong>:</p>
 <ul>
 <li><p>Выберите формат данных (например, <strong>ESRI Shapefile</strong>).</p></li>
-<li><p>Установите <strong>CRS</strong> — выбирайте спроецированную систему координат, <strong>WGS-84 UTM zone</strong> с номером зоны, соответствующей вашей территории (как определить номер зоны, разбиралось на занятии).</p></li>
+<li><p>Установите <strong>CRS</strong> — выбирайте спроецированную систему координат, <strong>WGS-84 UTM XN zone</strong> где X - номером зоны, соответствующий вашей территории (как определить номер зоны, разбирали на занятии).</p></li>
 </ul>
 </li>
 </ul>
@@ -478,7 +480,7 @@ document.write(`
 <ol class="arabic simple">
 <li><p><strong>Оформление зданий</strong>:</p>
 <ul class="simple">
-<li><p>Начните с выделения и настройки слоя со зданиями.</p></li>
+<li><p>Начните с настройки слоя со зданиями.</p></li>
 <li><p>Выберите тип визуализации — <strong>Single Symbol</strong> и закрасьте их в чёрный или любой другой цвет, контрастный белому.</p></li>
 </ul>
 </li>
@@ -488,7 +490,7 @@ document.write(`
 <li><p>Используйте тип визуализации — <strong>Categorized</strong>, выбрав поле <strong>Value</strong> с указанием типа землепользования.</p></li>
 </ul>
 </li>
-<li><p><strong>Оформление дорог</strong>:</p>
+<li><p><strong>Оформление других элементов</strong>:</p>
 <ul class="simple">
 <li><p>Примените визуальные стили для дорог, водоёмов и других элементов, которые планируете отобразить на карте.</p></li>
 </ul>
@@ -497,202 +499,110 @@ document.write(`
 <blockquote>
 <div><p><strong>Примечание:</strong> Следите за порядком слоев (например, чтобы ж/д не уходили под воду).</p>
 </div></blockquote>
-</div>
 <hr class="docutils" />
-<div class="section" id="id5">
-<h3>Этап 3: Определение области исследования<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<div class="section" id="id6">
-<h4>Этап 3.1: Создание круга заданным радиусом и его сохранение<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
-<p>Для создания круга с заданным радиусом в QGIS и его сохранения следуйте этим шагам:</p>
-<ol class="arabic simple">
-<li><p><strong>Определите центральную точку исследования:</strong></p>
-<ul class="simple">
-<li><p>Если вы уже знаете координаты центра исследуемого участка, создайте точку в этом месте.</p></li>
-<li><p>Если нет, выберите ориентировочный центр интересующей вас зоны на карте.</p></li>
-</ul>
-</li>
-<li><p><strong>Создайте точечный слой для центральной точки:</strong></p>
-<ul class="simple">
-<li><p>Перейдите в меню <strong>Layer</strong> → <strong>Create Layer</strong> → <strong>New Shapefile Layer</strong>.</p></li>
-<li><p>В открывшемся окне выберите <strong>Point</strong> (точка) в качестве типа геометрии.</p></li>
-<li><p>Задайте имя слоя (например, “Central_Point”) и выберите систему координат, которая соответствует вашей области исследования (например, UTM зоны вашего региона).</p></li>
-<li><p>Нажмите <strong>OK</strong> для создания слоя.</p></li>
-</ul>
-</li>
-<li><p><strong>Добавьте точку в новый слой:</strong></p>
-<ul class="simple">
-<li><p>Активируйте режим редактирования для слоя, щёлкнув по нему правой кнопкой мыши в панели <strong>Layers</strong> и выбрав <strong>Toggle Editing</strong>.</p></li>
-<li><p>Выберите инструмент <strong>Add Point</strong> (Добавить точку) в панели инструментов и щёлкните на карте в месте, выбранном как центр.</p></li>
-<li><p>Остановите режим редактирования, выбрав <strong>Save Edits</strong> для сохранения добавленной точки.</p></li>
-</ul>
-</li>
-<li><p><strong>Создайте круг радиусом заданным радиусом:</strong></p>
-<ul class="simple">
-<li><p>Перейдите в меню <strong>Processing</strong> → <strong>Toolbox</strong> и найдите инструмент <strong>Buffer</strong> (Буфер) (можно найти через строку поиска).</p></li>
-<li><p>В окне <strong>Buffer</strong> установите:</p>
-<ul>
-<li><p><strong>Input layer</strong> (Входной слой) — слой с центральной точкой (например, “Central_Point”).</p></li>
-<li><p><strong>Distance</strong> (Расстояние) — например, введите 3000 метров (для радиуса 3 км).</p></li>
-<li><p><strong>Segments</strong> (Сегменты) — значение по умолчанию, обычно 30, можно увеличить для создания более гладкого круга.</p></li>
-<li><p>Выберите подходящий <strong>Output layer</strong> (Имя выходного слоя) и формат для сохранения, например, <strong>Shapefile</strong> или <strong>GeoPackage</strong>.</p></li>
-</ul>
-</li>
-<li><p>Нажмите <strong>Run</strong> (Запуск), чтобы создать круг радиусом 3 км вокруг центральной точки.</p></li>
-</ul>
-</li>
-<li><p><strong>Проверьте и сохраните круг:</strong></p>
-<ul class="simple">
-<li><p>Убедитесь, что круг отображается правильно на карте.</p></li>
-<li><p>Сохраните полученный слой с кругом в предпочитаемом формате (Shapefile или GeoPackage) для дальнейшего использования на следующих этапах анализа.</p></li>
-</ul>
-</li>
-</ol>
-<p>Теперь у вас есть круговой полигон, ограничивающий область исследования радиусом 3 км. Этот слой будет использоваться для обрезки данных в следующих шагах.</p>
-</div>
-<div class="section" id="id7">
-<h4>Этап 3.2: Обрезка зданий и землепользования по границе круга<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
-<p>На этом этапе мы создадим обрезанные версии слоёв зданий и землепользования, ограниченные границами круга радиусом 3 км. Этот процесс позволит сфокусировать анализ на интересующем участке и исключить данные за его пределами.</p>
-<ol class="arabic simple">
-<li><p><strong>Подготовка к обрезке слоёв</strong>:</p>
-<ul class="simple">
-<li><p>Убедитесь, что слой круга, созданного на этапе 3.1, загружен в проект и видим на карте.</p></li>
-<li><p>Проверьте, что у вас есть необходимые слои для зданий и землепользования, которые вы хотите обрезать по границе круга.</p></li>
-</ul>
-</li>
-<li><p><strong>Используйте инструмент Clip (Обрезка) для слоя зданий</strong>:</p>
+<blockquote>
+<div><p><strong>Примечание:</strong> Перед следующим этапом, если у вас участки землепользования или здания значительно выходят за границы района, то вам необходимо воспользоваться интсрументом clip, чтобы сохранить только те, которые находятся внутри района</p>
+</div></blockquote>
 <ul class="simple">
 <li><p>Откройте <strong>Processing Toolbox</strong> (Панель инструментов обработки), выбрав <strong>View</strong> → <strong>Panels</strong> → <strong>Processing Toolbox</strong>, если панель ещё не открыта.</p></li>
 <li><p>Введите в строке поиска инструментов “Clip” или найдите его в разделе <strong>Vector overlay</strong> (Наложение векторных данных).</p></li>
 <li><p>В настройках инструмента <strong>Clip</strong>:</p>
 <ul>
 <li><p><strong>Input layer</strong> (Входной слой) — выберите слой зданий, который нужно обрезать.</p></li>
-<li><p><strong>Overlay layer</strong> (Накладываемый слой) — выберите слой с кругом радиусом 3 км.</p></li>
-<li><p><strong>Output layer</strong> (Выходной слой) — укажите название и место для сохранения обрезанного слоя зданий. Можно выбрать формат <strong>Shapefile</strong> или <strong>GeoPackage</strong> для сохранения.</p></li>
+<li><p><strong>Overlay layer</strong> (Накладываемый слой) — выберите слой с границами района.</p></li>
 </ul>
 </li>
 <li><p>Нажмите <strong>Run</strong> (Запуск) для выполнения обрезки.</p></li>
-<li><p>После завершения процесса обрезанный слой зданий будет автоматически добавлен на карту и отобразит только те здания, которые находятся внутри круга.</p></li>
+<li><p>После завершения процесса обрезанный слой зданий будет автоматически добавлен на карту и отобразит только те здания, которые находятся внутри границ города</p></li>
+<li><p>Не забудьте сохранить новый слой (по аналогии с 1.4), так как он является временным</p></li>
 </ul>
-</li>
-<li><p><strong>Обрезка слоя землепользования</strong>:</p>
-<ul class="simple">
-<li><p>Повторите процесс, описанный выше, для слоя землепользования.</p></li>
-<li><p>В настройках инструмента <strong>Clip</strong>:</p>
+</div>
+<div class="section" id="id5">
+<h3>Этап 3: Расчёты<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<div class="section" id="id6">
+<h4>Этап 3.1: Расчёт доли различных типов землепользования в границах района<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<p>На этом этапе мы рассчитаем долю каждого типа землепользования в пределах района.</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>1. Расчёт площади для каждого типа землепользования<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <ul>
-<li><p><strong>Input layer</strong> — выберите слой землепользования.</p></li>
-<li><p><strong>Overlay layer</strong> — выберите слой с кругом радиусом 3 км.</p></li>
-<li><p><strong>Output layer</strong> — задайте имя и выберите место для сохранения нового слоя землепользования.</p></li>
-</ul>
-</li>
-<li><p>Нажмите <strong>Run</strong> для выполнения обрезки.</p></li>
-<li><p>После завершения вы получите новый слой землепользования, обрезанный по границе круга радиусом 3 км.</p></li>
-</ul>
-</li>
-<li><p><strong>Проверка результатов</strong>:</p>
+<li><p>Откройте атрибутивную таблицу слоя землепользования:</p>
 <ul class="simple">
-<li><p>Убедитесь, что оба обрезанных слоя загружены в проект и корректно отображаются на карте.</p></li>
-<li><p>Отключите исходные слои зданий и землепользования, чтобы лучше видеть результаты обрезки.</p></li>
+<li><p>Для этого кликните правой кнопкой мыши на слой землепользования и выберите <strong>Open Attribute Table</strong>.</p></li>
 </ul>
 </li>
-<li><p><strong>Сохранение обрезанных слоёв</strong>:</p>
-<ul class="simple">
-<li><p>После проверки убедитесь, что обрезанные слои сохранены в подходящем формате (<strong>Shapefile</strong> или <strong>GeoPackage</strong>), чтобы их можно было использовать на следующих этапах анализа и визуализации.</p></li>
-</ul>
-</li>
-</ol>
-<p>Теперь у вас есть обрезанные по кругу слои зданий и землепользования, которые можно будет использовать для дальнейших расчётов и визуализации.</p>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="id8">
-<h3>Этап 4: Расчёты<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
-<div class="section" id="id9">
-<h4>Этап 4.1: Расчёт доли различных типов землепользования<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
-<p>На этом этапе мы рассчитаем долю каждого типа землепользования в пределах круга радиусом 3 км. Эти данные будут полезны для анализа распределения использования территории в выбранном районе.</p>
-<ol class="arabic simple">
-<li><p><strong>Расчёт площади для каждого типа землепользования</strong>:</p>
-<ul class="simple">
-<li><p>Откройте атрибутивную таблицу обрезанного слоя землепользования (правой кнопкой мыши на слой → <strong>Open Attribute Table</strong>).</p></li>
 <li><p>Если в таблице нет столбца с площадями, добавьте его:</p>
-<ul>
-<li><p>Перейдите в режим редактирования (<strong>Toggle Editing Mode</strong>).</p></li>
-<li><p>Откройте <strong>Field Calculator</strong> (Калькулятор полей) с помощью значка или меню <strong>Layer</strong> → <strong>Field Calculator</strong>.</p></li>
-<li><p>Создайте новый столбец (например, “Area_sq_m”) и выберите <strong>Decimal number</strong> для типа данных.</p></li>
-<li><p>В поле <strong>Expression</strong> введите выражение <code class="docutils literal notranslate"><span class="pre">$area</span></code>, которое автоматически рассчитает площадь для каждого полигона в квадратных метрах. Нажмите <strong>OK</strong> для сохранения результатов.</p></li>
+<ol class="arabic">
+<li><p>Перейдите в режим редактирования:</p>
+<ul class="simple">
+<li><p>Нажмите на кнопку <strong>Toggle Editing Mode</strong> в левом верхнем углу атрибутивной таблицы.</p></li>
 </ul>
+</li>
+<li><p>Откройте <strong>Field Calculator</strong> (Калькулятор полей):</p>
+<ul class="simple">
+<li><p>Для этого нажмите на значок калькулятора или выберите <strong>Layer</strong> → <strong>Field Calculator</strong> в меню.</p></li>
+</ul>
+</li>
+<li><p>Создайте новый столбец для площади:</p>
+<ul class="simple">
+<li><p>В поле <strong>Output field name</strong> введите название столбца (например, “Area_sq_m”).</p></li>
+<li><p>В поле <strong>Output field type</strong> выберите <strong>Decimal number</strong>.</p></li>
+</ul>
+</li>
+<li><p>В поле <strong>Expression</strong> введите выражение:</p>
+<div class="highlight-plaintext notranslate"><div class="highlight"><pre><span></span>$area
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Это выражение автоматически вычислит площадь каждого полигона в квадратных метрах.</p></li>
+</ul>
+</li>
+<li><p>Нажмите <strong>OK</strong>, чтобы сохранить новый столбец.</p></li>
+</ol>
 </li>
 <li><p>Теперь у каждого полигона будет указана его площадь в новом столбце “Area_sq_m”.</p></li>
 </ul>
-</li>
-<li><p><strong>Вычисление процентного соотношения каждого типа землепользования</strong>:</p>
-<ul class="simple">
-<li><p>Сгруппируйте полигоны по типам землепользования, чтобы узнать суммарную площадь для каждого типа:</p>
+</div>
+<div class="section" id="id8">
+<h3>2. Вычисление процентного соотношения каждого типа землепользования<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 <ul>
-<li><p>Перейдите в <strong>Processing Toolbox</strong> → найдите инструмент <strong>Group Stats</strong> или <strong>Statistics by categories</strong> (если доступно).</p></li>
+<li><p>Чтобы вычислить долю каждого типа землепользования, выполните следующие шаги:</p>
+<ol class="arabic">
+<li><p><strong>Группировка по типам землепользования</strong>:</p>
+<ul class="simple">
+<li><p>Перейдите в <strong>Processing Toolbox</strong> (Обработку инструментов).</p></li>
+<li><p>Найдите инструмент <strong>Group Stats</strong> или <strong>Statistics by Categories</strong> (если доступно).</p></li>
 <li><p>Укажите обрезанный слой землепользования в качестве <strong>Input layer</strong>.</p></li>
-<li><p>Выберите поле, где указан тип землепользования, как <strong>Category field</strong>.</p></li>
-<li><p>Укажите столбец с площадью “Area_sq_m” как <strong>Values field</strong> и выберите <strong>Sum</strong> (сумму), чтобы получить общую площадь для каждого типа землепользования.</p></li>
+<li><p>В поле <strong>Category field</strong> выберите столбец, в котором указан тип землепользования (например, <code class="docutils literal notranslate"><span class="pre">landuse</span></code>).</p></li>
+<li><p>В поле <strong>Values field</strong> выберите столбец с площадью “Area_sq_m”.</p></li>
+<li><p>В качестве агрегатной функции выберите <strong>Sum</strong>, чтобы получить суммарную площадь для каждого типа землепользования.</p></li>
 </ul>
 </li>
-<li><p>Запишите результаты или экспортируйте их в таблицу, чтобы получить сумму площадей для каждого типа землепользования.</p></li>
-<li><p>Рассчитайте долю каждого типа, разделив его суммарную площадь на общую площадь круга:</p>
+<li><p><strong>Расчёт доли каждого типа землепользования</strong>:</p>
 <ul>
-<li><p>Общую площадь круга можно получить из атрибутов слоя круга (или вручную вычислить её как π * (3000 м)^2).</p></li>
-<li><p>Для каждого типа вычислите процент, разделив площадь типа на общую площадь и умножив на 100%.</p></li>
-</ul>
+<li><p>В полученной таблице с результатами агрегации, откройте <strong>Field Calculator</strong> (Калькулятор полей).</p></li>
+<li><p>Для расчёта доли каждого типа землепользования используйте следующее выражение:</p>
+<div class="highlight-plaintext notranslate"><div class="highlight"><pre><span></span>(поле с суммой площади для категории  / сумма всех площадей) * 100
+</pre></div>
+</div>
+<p>названия полей зависит от предудыщих этапов</p>
 </li>
-</ul>
-</li>
-<li><p><strong>Сохранение результатов</strong>:</p>
-<ul class="simple">
-<li><p>Занесите результаты расчётов в таблицу атрибутов слоя землепользования или сохраните их в отдельный текстовый документ или электронную таблицу. Эта таблица будет полезна для отчёта и добавления на итоговую карту.</p></li>
 </ul>
 </li>
 </ol>
-</div>
+</li>
+<li><p>После выполнения этих шагов у вас будет таблица с процентными долями для каждого типа землепользования. Эти данные можно использовать для дальнейшего анализа и представления на карте</p></li>
+</ul>
 <hr class="docutils" />
-<div class="section" id="id10">
-<h4>Этап 4.2: Расчёт процента застроенной территории<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h4>
-<p>На этом этапе мы вычислим, какой процент территории внутри круга занимает застройка (здания), что позволит оценить плотность застройки на исследуемом участке.</p>
-<ol class="arabic simple">
-<li><p><strong>Расчёт общей площади застройки</strong>:</p>
-<ul class="simple">
-<li><p>Откройте атрибутивную таблицу обрезанного слоя зданий и убедитесь, что в ней есть столбец с площадями.</p></li>
-<li><p>Если столбец с площадями отсутствует, добавьте его с помощью <strong>Field Calculator</strong>:</p>
-<ul>
-<li><p>Перейдите в режим редактирования, откройте <strong>Field Calculator</strong> и создайте новый столбец (например, “Building_Area_sq_m”).</p></li>
-<li><p>Введите выражение <code class="docutils literal notranslate"><span class="pre">$area</span></code> для расчёта площади зданий в квадратных метрах и нажмите <strong>OK</strong> для сохранения.</p></li>
-</ul>
-</li>
-<li><p>Используйте инструмент <strong>Statistics by categories</strong> или <strong>Group Stats</strong> (в зависимости от версии QGIS) для суммирования площадей всех зданий.</p>
-<ul>
-<li><p>В настройках выберите слой зданий как <strong>Input layer</strong> и поле с площадями “Building_Area_sq_m” как <strong>Values field</strong> с функцией <strong>Sum</strong>.</p></li>
-<li><p>Запишите или экспортируйте полученную сумму — это будет общая площадь застройки.</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>Вычисление процента застроенной территории</strong>:</p>
-<ul class="simple">
-<li><p>Найдите общую площадь круга (из атрибутов круга или рассчитав её по формуле π * (3000 м)^2).</p></li>
-<li><p>Рассчитайте процент застроенной территории, разделив общую площадь застройки на площадь круга и умножив на 100%:
-[
-\text{Процент застройки} = \frac{\text{Общая площадь застройки}}{\text{Площадь круга}} \times 100%
-]</p></li>
-</ul>
-</li>
-<li><p><strong>Сохранение результата</strong>:</p>
-<ul class="simple">
-<li><p>Сохраните полученный процент в отдельный текстовый документ, таблицу или атрибутивную таблицу слоя круга для использования на этапе визуализации.</p></li>
-<li><p>Этот показатель можно будет включить на итоговую карту, чтобы наглядно показать плотность застройки на исследуемом участке.</p></li>
-</ul>
-</li>
-</ol>
+<div class="section" id="id9">
+<h4>Этап 3.2: Расчёт процента застроенной территории<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
+<p>Это задача ещё проще: необходимо посчитать площадь района, вычислить общую сумму площадей подошв зданий и разделить её на общую площадь района.
+Этапность шагов продумайте самостоятельно</p>
 </div>
 </div>
-<hr class="docutils" />
 <div class="section" id="layout">
-<h3>Этап 5: Создание Layout с двумя картами<a class="headerlink" href="#layout" title="Permalink to this heading">#</a></h3>
+<h3>Этап 4: Создание Layout с двумя картами<a class="headerlink" href="#layout" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Перейдите в меню <strong>Project</strong> → <strong>Layout Manager</strong> и создайте новый макет (Layout).</p></li>
 <li><p>Добавьте два картографических фрейма (Map).</p>
@@ -717,8 +627,8 @@ document.write(`
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="id11">
-<h3>Этап 6: Добавление элементов карты<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<div class="section" id="id10">
+<h3>Этап 5: Добавление элементов карты<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>Название</strong>: Вставьте текстовый элемент для заголовка карты, отразив тематику карты.</p></li>
 <li><p><strong>Легенда</strong>: Добавьте легенду для обозначения типов землепользования, категорий зданий и других данных.</p></li>
@@ -727,20 +637,20 @@ document.write(`
 </ol>
 </div>
 <hr class="docutils" />
-<div class="section" id="id12">
-<h3>Этап 7: Сохранение итогового изображения<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<div class="section" id="id11">
+<h3>Этап 6: Сохранение итогового изображения<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>В <strong>Layout Manager</strong> выберите <strong>Export as Image</strong> (Экспортировать как изображение) и сохраните итоговый макет в формате PNG или JPEG.</p></li>
-<li><p>Проверьте качество изображения, чтобы оно подходило для отчёта.</p></li>
+<li><p>Проверьте качество изображения, чтобы оно подходило для отчёта (= чтобы читалось все).</p></li>
 </ol>
 </div>
 <hr class="docutils" />
-<div class="section" id="id13">
-<h3>Итог<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<div class="section" id="id12">
+<h3>Итог<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
 <p>После завершения работы у вас должны получиться две карты на одном листе, отражающие застройку и распределение землепользования на выбранном участке. На этом листе также должны быть приведены следующие расчёты:</p>
 <ul class="simple">
 <li><p>Процент застроенной территории</p></li>
-<li><p>Доли разных типов землепользования</p></li>
+<li><p>Доли разных типов землепользования (для 5 категорий с максимальными долями)</p></li>
 </ul>
 <p><strong>Сдача работы:</strong> В ЛМС загрузите карту (в формате PNG, JPEG) и краткое описание исследуемой территории в отдельном текстовом документе.</p>
 <p><strong>Удачи!</strong></p>
@@ -806,28 +716,27 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Примечание:</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qgis">Создание карт застройки и землепользования в QGIS</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Описание задания</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Перед началом работы</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#openstreetmap">Этап 1: Выгрузка данных из OpenStreetMap и их сохранение</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Этап 2: Настройки визуализации</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Этап 3: Определение области исследования</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Этап 3.1: Создание круга заданным радиусом и его сохранение</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Этап 3.2: Обрезка зданий и землепользования по границе круга</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Этап 3: Расчёты</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Этап 3.1: Расчёт доли различных типов землепользования в границах района</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Этап 4: Расчёты</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Этап 4.1: Расчёт доли различных типов землепользования</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Этап 4.2: Расчёт процента застроенной территории</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1. Расчёт площади для каждого типа землепользования</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2. Вычисление процентного соотношения каждого типа землепользования</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Этап 3.2: Расчёт процента застроенной территории</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Этап 5: Создание Layout с двумя картами</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Этап 4: Создание Layout с двумя картами</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#themes-qgis">Использование тем (Themes) в QGIS</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Этап 6: Добавление элементов карты</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Этап 7: Сохранение итогового изображения</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Итог</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Этап 5: Добавление элементов карты</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Этап 6: Сохранение итогового изображения</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Итог</a></li>
 </ul>
 </li>
 </ul>
